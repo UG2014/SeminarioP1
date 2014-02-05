@@ -51,7 +51,7 @@ public class InfoTiendasActivity extends Activity {
 		btn2.setOnClickListener(new ButtonListener());
 	if (Tienda.equals("0")){
 		name.setText("Tienda de Vinos");
-		adress.setText("12 Calle 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="7812-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -60,7 +60,7 @@ public class InfoTiendasActivity extends Activity {
 		
 	}else if (Tienda.equals("1")){
 		name.setText("Tienda de Lego");
-		adress.setText("12 Calle 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="5815-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -69,7 +69,7 @@ public class InfoTiendasActivity extends Activity {
 		
 	}else if (Tienda.equals("2")){
 		name.setText("Tienda de Libros");
-		adress.setText("22 ave 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="2815-2523";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -78,7 +78,7 @@ public class InfoTiendasActivity extends Activity {
 		
 	}else if (Tienda.equals("3")){
 		name.setText("Tienda de Zapatos");
-		adress.setText("12 Calle 2 ave Zona 1");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="4815-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -87,7 +87,7 @@ public class InfoTiendasActivity extends Activity {
 		//,"Tienda de Ropa","Tienda de vinos","Tienda de libros","Tienda de Ropa"};
 	}else if (Tienda.equals("4")){
 		name.setText("Tienda de Ropa");
-		adress.setText("12 Calle 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="7815-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -96,7 +96,7 @@ public class InfoTiendasActivity extends Activity {
 		
 	}else if (Tienda.equals("5")){
 		name.setText("Tienda de Vino");
-		adress.setText("12 Calle 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="5815-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -105,7 +105,7 @@ public class InfoTiendasActivity extends Activity {
 		
 	}else if (Tienda.equals("6")){
 		name.setText("Tienda de Libros");
-		adress.setText("12 Calle 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="8815-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -114,7 +114,7 @@ public class InfoTiendasActivity extends Activity {
 		
 	}else if (Tienda.equals("7")){
 		name.setText("Tienda de Ropa");
-		adress.setText("12 Calle 23 ave Zona 12");
+		adress.setText("34 Main St, Queens. NY 11367, EE.UU.");
 		tel="9815-2323";
 		phone.setText(tel);
 		horario.setText("Lunes a Viernes: 9:00am - 6:00pm \n Sabados 7:00am a 1:00pm");
@@ -122,6 +122,7 @@ public class InfoTiendasActivity extends Activity {
 		email.setText("lego@venta.com");
 		
 	}
+	Linkify.addLinks(adress,Linkify.ALL);
 	Linkify.addLinks(phone,Linkify.ALL);
 	Linkify.addLinks(website,Linkify.ALL);
 	Linkify.addLinks(email,Linkify.ALL);
