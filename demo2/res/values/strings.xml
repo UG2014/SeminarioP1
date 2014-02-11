@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">demo2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_country_detail">CountryDetailActivity</string>
+	<string name="action_help">Ayuda</string>
+    <string name="action_share">Compartir</string>
+    <string name="title_fragment_list">Listado</string>
+    <string name="title_fragment_flags">Banderas</string>
+    <string name="msg_share">Te comparto la información de %1$s %2$s</string>
+    <string name="msg_about">Desarrollado por JTR (sp1_2014)</string>
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Cerrar</string>
+    <string-array name="drawer_options">
+        <item>Informacion de Pais</item>
+        <item>Acerca de</item>
+    </string-array>
+</resources>
