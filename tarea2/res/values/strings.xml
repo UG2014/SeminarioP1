@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tarea 2 </string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_country_detail">CountryDetailActivity</string>
+	<string name="action_help">Ayuda</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_fav">Favorito</string>
+    <string name="menu_settings">stt</string>
+    <string name="menu_guardar">save</string>
+    <string name="menu_nuevo">new</string>
+    <string name="title_fragment_list">Tiendas</string>
+    <string name="title_fragment_flags">Mapas</string>
+    <string name="msg_share">Te comparto la información de %1$s %2$s</string>
+    <string name="msg_about">Tarea 2 \n Desarrollado por JTR \n Febrero 2014</string>
+    <string name="msg_maps">Maps Coming soon</string>
+    <string name="msg_Coments">esta imagen es de ejemolo en sp1 \n dadas asdasd dadasd\n dadas asdasd dadasd \n dadas asdasd dadasd \n dadas asdasd dadasd</string>
+    <string name="msg_comunity"> Coming soon</string>
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Cerrar</string>
+    <string name="call">Llamar !</string>
+    <string name="name_store">Nombre: </string>
+    <string name="adress_store">Direccion: </string>
+    <string name="phone_store">Telefono: </string>
+    <string name="horario_store">Horario: </string>
+    <string name="website_store">WebSite: </string>
+    <string name="title_activity_info_tiendas">InfoTiendasActivity</string>
+    <string name="title_activity_comentes_market">ComentesMarketActivity</string>
+    <string name="images">Coments</string>
+    <string-array name="drawer_options">
+        <item>Imagenes</item>
+        <item>Tiendas</item>
+        <item>Comunidad</item>
+        <item>About</item>
+    </string-array>
+</resources>
