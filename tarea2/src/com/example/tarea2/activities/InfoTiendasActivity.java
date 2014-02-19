@@ -137,7 +137,7 @@ public class InfoTiendasActivity extends Activity {
 			Intent inten = null;
 			if (v.getId() == btn.getId()){
 			inten= new Intent(getApplicationContext(),ComentesMarketActivity.class);
-				
+				inten.putExtra("id", Tienda);
 				
 			}else if (v.getId() == btn2.getId()){
 			 inten= new Intent(Intent.ACTION_CALL);

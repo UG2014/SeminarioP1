@@ -998,8 +998,16 @@ containing a value of this type.
         public static final int im7=0x7f020063;
         public static final int im8=0x7f020064;
         public static final int im9=0x7f020065;
-        public static final int logo=0x7f020066;
-        public static final int social_share=0x7f020067;
+        public static final int lego=0x7f020066;
+        public static final int libro=0x7f020067;
+        public static final int libro2=0x7f020068;
+        public static final int logo=0x7f020069;
+        public static final int ropa=0x7f02006a;
+        public static final int ropa2=0x7f02006b;
+        public static final int social_share=0x7f02006c;
+        public static final int vinos=0x7f02006d;
+        public static final int vinos2=0x7f02006e;
+        public static final int zapatos=0x7f02006f;
     }
     public static final class id {
         public static final int TextViewName=0x7f05003e;
