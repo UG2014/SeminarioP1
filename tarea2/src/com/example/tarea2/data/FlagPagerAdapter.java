@@ -9,17 +9,18 @@ import com.example.tarea2.R;
 import com.example.tarea2.fragments.FragmentImages;
 
 public class FlagPagerAdapter extends FragmentPagerAdapter {
+public class FlagPagerAdapter extends FragmentPagerAdapter {
 	private int[] arrayFlags= new int[]{
-			R.drawable.im,
-			R.drawable.im2,
-			R.drawable.im3,
-			R.drawable.im4,
-			R.drawable.im5,
-			R.drawable.im6,
-			R.drawable.im7,
-			R.drawable.im8,
-			R.drawable.im9,
-			R.drawable.im10};
+			R.drawable.argentina,
+			R.drawable.brasil,
+			R.drawable.chile,
+			R.drawable.colombia,
+			R.drawable.cuba,
+			R.drawable.ecuador,
+			R.drawable.guatemala,
+			R.drawable.mexico,
+			R.drawable.peru,
+			R.drawable.venezuela};
 
 	public FlagPagerAdapter(FragmentManager fm) {
 		super(fm);
