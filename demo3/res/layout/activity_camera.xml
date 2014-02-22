@@ -5,11 +5,22 @@
     android:orientation="vertical"
     tools:context=".CameraActivity" >
 
-    <Button
-        android:id="@+id/btnfromGallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_from_gallery" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnfromGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_from_gallery" />
+
+        <Button
+            android:id="@+id/btnfromcamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_from_camera" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/img"

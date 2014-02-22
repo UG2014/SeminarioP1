@@ -6,6 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="btnphoto">Fotografia</string>
     <string name="btn_from_gallery">Desde la galeria</string>
+    <string name="btn_from_camera">Desde la Camara</string>
     <string name="msg_yes">Si</string>
     <string name="msg_no">No</string>
     <string name="title_activity_camera">CameraActivity</string>
