@@ -1,5 +1,7 @@
 package com.sp2014.demo3.data;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -8,38 +10,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+import com.sp2014.demo3.BitmapLRUCache;
 import com.sp2014.demo3.R;
+import com.sp2014.demo3.activities.MainActivity;
 
 public class ImageAdapter extends BaseAdapter {
-	private int[] arrayFlags= new int[]{
-			R.drawable.brasil,
-			R.drawable.mexico,
-			R.drawable.colombia,
-			R.drawable.argentina,
-			R.drawable.peru,
-			R.drawable.venezuela,
-			R.drawable.chile,
-			R.drawable.ecuador,
-			R.drawable.guatemala,
-			R.drawable.cuba};
-	
-	String[] array_countries = new String[]{"Brasil", "Mexico", "Colombia",
-			"Argentina","Peru", "Venezuela", "Chile", "Ecuador","Guatemala", "Cuba"};
-	
-	private Resources resources;
+	private ImageLoader imageLoader; 
+	private ArrayList<Image> dataArray;
 	private LayoutInflater inflater;
 	
-	public ImageAdapter (Context context){
-		this.resources= context.getResources();
+	public ImageAdapter (Context context,  ArrayList<Image> dataArray){
+		this.dataArray= dataArray;
 		this.inflater=LayoutInflater.from(context);
+		this.imageLoader = new ImageLoader(MainActivity.requestQueue, new BitmapLRUCache());
 	}
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return arrayFlags.length;
+		return dataArray.size();
 	}
 
 	@Override
@@ -57,25 +49,26 @@ public class ImageAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder = null; 
+		Image current = dataArray.get(position);
 		if(convertView==null){
 			 convertView= inflater.inflate(R.layout.grid_image, null);
 			 holder = new ViewHolder(); 
 			 
 			 holder.txtName = (TextView)convertView.findViewById(R.id.txtName);
-			 holder.imflag = (ImageView)convertView.findViewById(R.id.imgflag);
+			 holder.imflag = (NetworkImageView)convertView.findViewById(R.id.imgflag);
 			
 			 convertView.setTag(holder);
 		 }else {
 			 holder = (ViewHolder)convertView.getTag();
 		 }
-		 holder.txtName.setText(array_countries[position]);
-		 holder.imflag.setImageBitmap(decodeSampledBitmapFromResource(resources,arrayFlags[position],400,200));
+		 holder.txtName.setText(current.getUserName());
+		 holder.imflag.setImageUrl(current.getImgUrl(), imageLoader);
 		
 		 return convertView;
 	}
 	
 	static class ViewHolder{
-		public ImageView imflag;
+		public NetworkImageView imflag;
 		public TextView txtName;
 	}
 	
