@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/listViewComunity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10" >
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/buttonCamera"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/hello_world"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_action_photo" />
+
+</LinearLayout>
