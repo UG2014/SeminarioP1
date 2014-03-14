@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtLatLng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/btnDelet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <fragment 
+         android:id="@+id/fragmentMap"
+         android:layout_width="match_parent"
+    	 android:layout_height="match_parent" 
+    	 android:name="com.seminarioP1.demo4.fragments.PlacesFragment"
+    	 tools:layout="@layout/fragment_places" />
+    
+</LinearLayout>

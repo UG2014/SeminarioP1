@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="vertical">
+
+    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	    	android:orientation="horizontal">	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/name_store"
+	        android:layout_marginTop="53dp"
+	        android:textSize="16sp" />
+	    
+	    <TextView
+	        android:id="@+id/TextViewName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="53dp"
+	        android:textSize="22sp" />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal">	
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/adress_store"
+		        android:layout_marginTop="53dp"
+		        android:textSize="16sp" />
+	        <TextView
+		        android:id="@+id/textViewAdress"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="47dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+      </LinearLayout>
+	  <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal">	
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/phone_store"
+		        android:layout_marginTop="53dp"
+		        android:textSize="16sp" />
+    		<TextView
+		        android:id="@+id/textViewPhone"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="40dp"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    		
+
+	   </LinearLayout>
+	   <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal">	
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/horario_store"
+		        android:layout_marginTop="53dp"
+		        android:textSize="16sp" />
+			 <TextView
+		        android:id="@+id/textViewHorario"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="30dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+	   </LinearLayout>  
+	   <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal">	
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/website_store"
+		        android:layout_marginTop="53dp"
+		        android:textSize="16sp" />
+            <TextView
+		        android:id="@+id/textViewWebSite"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="38dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		</LinearLayout>
+		<LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+    	 android:orientation="horizontal">	
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/website_store"
+		        android:layout_marginTop="53dp"
+		        android:textSize="16sp" />
+			 <TextView
+		        android:id="@+id/textViewEmail"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="31dp"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		</LinearLayout>
+<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+    	android:orientation="horizontal">
+    <Button
+        android:id="@+id/buttonCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:text="@string/call" />
+
+    <Button
+        android:id="@+id/buttonMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/images" />
+</LinearLayout>
+
+</LinearLayout>
+</ScrollView>
