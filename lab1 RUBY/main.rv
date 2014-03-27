@@ -1,0 +1,150 @@
+module Parte1
+	def palindromo?(s)
+		
+		num_expr = /[^[^\w*]]/
+		
+		asco = s.gsub( /[^\w]/, "" )
+		asco2 = asco.downcase
+		asco2Volteado = asco2.reverse
+		if asco2 == asco2Volteado
+			puts 'Es palindromo'
+		else
+			puts 'No es palindromo'
+		end
+	end
+	
+	def cuenta_palabras(s)
+		sp = s.split(" ")
+		sc = s.split(" ")
+		h1 = Hash.new  
+		i = 0
+		x = 0
+		while i<sp.size do
+				x = s.scan(sp[i]).size
+				h1[sp[i]] = x	
+				i += 1
+		end
+		x = 0
+		p h1
+	end
+	
+	def tower(n,desde,hacia,temp)#entra numero de discos
+		  if n==1 #si se ha llegado al ultimo disco
+     	   puts "mover disco a la pocision"
+      		puts (desde)
+      		puts "hacia la pocision"
+      		puts (hacia)
+      		puts "\n"
+   		else #en caso contrario
+	     tower(n-1,desde,temp,hacia)#llamar al metodo
+	     tower(1,desde,hacia,temp)#volver a llamar al metodo
+	     tower(n-1,temp,hacia,desde)#y volverlo a llamar pro tercera ocasión
+   end
+ end#fin del metodo tower
+
+def nmovi(x)#para calcular numero de movimientos
+   move=(2**x)-1#formula de las torres de hanoi
+   
+end
+
+def char_count(s,c)
+	i = 0
+	cont = 0
+while i < s.size 
+	if s[i,1] == c
+	cont +=1
+	i+=1
+	else
+	i+=1
+end
+end
+p cont
+end
+	
+def atoi str
+    number = 0
+    i = 0
+    is_negative = (str[0].chr == '-')
+    str.gsub! /[^\d]*/ , ''
+     str.reverse.each_char { |c|
+      number += 10**i * Integer(c)
+      i += 1
+    }
+    return number * (is_negative ? -1 : 1)
+end
+
+def sort(a,asc)	
+		if asc == 0
+		j = 0
+			while j < ((a.size)-1)
+			i = 0
+				while i < ((a.size)-1)
+					if a[i] > a[i+1]
+						aux=a[i]
+						a[i] = a[i+1]
+						a[i+1]=aux;
+					end
+					i += 1
+				end
+				j += 1
+			end
+		end	
+		if asc == 1
+			j = 0
+			while j < ((a.size)-1)
+			i = 0
+				while i < ((a.size)-1)
+					if a[i] < a[i+1]
+						aux=a[i]
+						a[i] = a[i+1]
+						a[i+1]=aux;
+					end
+					i += 1
+				end
+				j += 1
+			end
+		end
+		a
+	end
+
+###CLASE DE PRUEBA	
+class Test
+         include Parte1
+	
+end
+
+##FUNCION CON LOS METODOS
+foo = Test.new
+## EJERCICIO 1
+p "Palindromo"
+
+## EJERCICIO 2
+p "A man, a plan, a canal – Panama"
+foo.palindromo?("A man, a plan, a canal – Panama")
+
+## EJERCICIO 3
+p "Hash"
+foo.cuenta_palabras("hola mundo hola madrid hola hola  madrid adios adios hola mundo holaaa asdd")
+
+## EJERCICIO 4
+p "Contar caracteres"
+foo.char_count("holaooo,mdzmvn,mvoasdasoadoasdadasdoafoo","o")
+ 
+## EJERCICIO 5
+p "ATOI"
+p foo.atoi("11121")
+## EJERCICIO 6
+p "SORT"
+p foo.sort([2,3,1,9,5],1)
+
+
+## EJERCICIO 7
+p "TORRES DE HANOI"
+puts "Da el numero de discos a mover: "
+STDOUT.flush
+disco=gets.chomp
+discos=disco.to_i
+foo.tower(discos,1,3,2)	
+ 
+
+end

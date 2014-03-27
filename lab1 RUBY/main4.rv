@@ -1,0 +1,39 @@
+class Computer
+    @@users = {}
+    
+    def initialize username, password
+        @username = username
+        @password = password
+        
+        @files = {}
+    end
+    
+    
+    def create(name)
+		if @files.has_key?(name)
+			p "Error #{name} name duplicated"		
+		else 
+		t = Time.now
+ 		h= t.strftime("%H:%M:%S")
+			@files[name]= h
+		end	
+	end
+	
+	def ls (hash)
+	if hash["sort"] == "asc"
+		p @files.sort_by { |sort, value| value } 
+	end
+	if hash["sort"] == "desc"	
+		p @files.sort_by{ |sort, value| value }.reverse
+	end
+	
+	def rm(name)
+		if @files.has_key?(name)
+			@files.delete(name)
+		else 
+			p "ERROR #{name}"
+		end	
+	end
+	end
+    
+end

@@ -1,0 +1,83 @@
+class Dessert
+$size=0
+attr_accessor :name, :calories
+
+    def initialize(name, calories)
+     @name = name
+     @calories =calories 
+     $size = $size + 1
+    end
+    
+	def getSize 
+	$size
+	end
+	
+	def setSize(size)
+	$size = size
+	end
+    
+    def setName(name)
+    @name=name
+    end
+    
+    def setCalories(calories)
+    @calories=calories
+    end
+    
+    def getName
+    @name
+    end
+    
+    def getCalories
+    @calories
+    end
+    
+    
+    def healthy?
+       if calories < 200
+       	true
+       else
+       	false
+       end
+    end
+    
+    def delicious?
+      true
+    end
+    
+    def count 
+    @size
+    end
+    
+    def to_s
+      # YOUR CODE HERE
+    end
+end
+
+class JellyBean < Dessert
+attr_accessor :flavor
+   def initialize(name, calories, flavor)
+	@name = name
+        @calories = calories
+        @flavor = flavor
+    end
+	
+    def delicious?
+	if flavor !=  "black licorice"
+		true
+	else
+		false
+	end
+        
+    end
+    
+   def getFlavor
+   @flavor
+   end 
+   
+   def setFlavor(flavor)
+   @flavor = flavor
+   end
+   
+   
+end

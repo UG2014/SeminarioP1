@@ -1,0 +1,61 @@
+module Action
+  def jump
+    @distance = rand(4) + 2
+    puts "I jumped forward #{@distance} feet!"
+  end
+end
+
+class Rabbit
+  include Action
+  
+  attr_reader :name
+  
+  def initialize(name)
+    @name = name
+  end
+  
+  def run 
+  totDistance = @distance
+  tiempo= 0 
+  while  totDistance < 33
+  totDistance += @disntance
+  tiempo = tiempo +1 
+  end
+  p "Distancia: #{totDistance} fts time: #{tiempo} seg"
+  
+  end
+end
+
+class Cricket
+  include Action
+  attr_reader :name
+  
+  def initialize(name)
+    @name = name
+  end
+   def run 
+  totDistance = @distance
+  tiempo= 0 
+  while  totDistance < 33
+  totDistance += @disntance
+  tiempo = tiempo +1 
+  end
+  p "Distancia: #{totDistance} fts time: #{tiempo} seg"
+  
+  end
+  
+  	def chirp
+		sound = rand(90) + 10
+		sound.times do
+			puts "Chirp... chirp!!" 
+		end
+	end
+  
+  
+end
+
+peter = Rabbit.new("Peter")
+jiminy = Cricket.new("Jiminy")
+
+peter.jump
+jiminy.jump
