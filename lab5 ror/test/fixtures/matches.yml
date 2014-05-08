@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_date: 2014-04-10
+  phase: 1
+  state: 1
+  teamL_id: 1
+  teamV_id: 1
+  result: MyString
+  teamWind: 1
+  teamL: 1
+  draw: 
+  group_id: 1
+  stadium_id: 1
+
+two:
+  game_date: 2014-04-10
+  phase: 1
+  state: 1
+  teamL_id: 1
+  teamV_id: 1
+  result: MyString
+  teamWind: 1
+  teamL: 1
+  draw: 
+  group_id: 1
+  stadium_id: 1
